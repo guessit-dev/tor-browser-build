@@ -1,0 +1,19 @@
+dist: xenial
+language: minimal
+addons:
+  apt:
+    update: true
+    packages:
+      - libdata-dump-perl
+      - libdata-uuid-perl
+      - libfile-copy-recursive-perl
+      - libio-captureoutput-perl
+      - libpath-tiny-perl
+      - libseccomp2
+      - libsort-versions-perl
+      - libstring-shellquote-perl
+      - libtemplate-perl
+      - libyaml-libyaml-perl
+      - runc
+script:
+  - make alpha-android-armv7
