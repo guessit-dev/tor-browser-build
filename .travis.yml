@@ -16,4 +16,7 @@ addons:
       - libyaml-libyaml-perl
       - runc
 script:
+  - gpg --keyring keyring/cmake.gpg --no-default-keyring -k
+  - gpg --no-default-keyring --keyring keyring/cmake.gpg --keyserver pool.sks-keyservers.net --recv-keys 2D2CEF1034921684
+  - gpg --keyring keyring/cmake.gpg --no-default-keyring -k
   - make alpha-android-armv7
